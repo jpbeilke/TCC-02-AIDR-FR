@@ -27,9 +27,17 @@ def montar_consulta_evento_producao(
             ep.qualidade,
             ep.taxa_producao,
             ep.tempo_rodando_segundo,
-            ep.qtd_batelada
-        FROM evento_producao ep
-        WHERE ep.id_evento_turno IN ({marcadores_turno})
+            ep.qtd_batelada,
+            et.id_evento_turno_atual,
+            et.id_application_client,
+            et.id_turno AS id_turno_estatico,
+            et.data_inicio,
+            et.data_fim
+        FROM paas.evento_producao ep
+        INNER JOIN paas.evento_turnos et
+            ON ep.id_evento_turno = et.id_evento_turno_atual
+        WHERE et.id_turno IN ({marcadores_turno})
+          AND et.id_application_client = ?
           AND ep.data_evento >= ?
           AND ep.data_evento <= ?
         ORDER BY ep.data_evento

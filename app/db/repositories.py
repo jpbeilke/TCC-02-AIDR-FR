@@ -7,6 +7,7 @@ from app.db.queries import montar_consulta_evento_producao
 def buscar_eventos_producao(
     data_inicio: str,
     data_fim: str,
+    id_application_client: str,
     ids_turno: list[int] | None = None,
     limite: int | None = None,
 ) -> pd.DataFrame:
@@ -14,14 +15,14 @@ def buscar_eventos_producao(
     Busca registros da tabela evento_producao dentro do período informado.
     """
     if ids_turno is None:
-        ids_turno = [21, 22, 23]
+        ids_turno = [3, 4, 5]
 
     consulta = montar_consulta_evento_producao(
         ids_turno=ids_turno,
         limite=limite,
     )
 
-    parametros = [*ids_turno, data_inicio, data_fim]
+    parametros = [*ids_turno, id_application_client, data_inicio, data_fim]
 
     with obter_conexao() as conexao:
         dados = pd.read_sql_query(

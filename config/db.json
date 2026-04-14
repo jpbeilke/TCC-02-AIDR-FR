@@ -1,7 +1,7 @@
 {
   "Database": "sql",
   "ConnectionStrings": {
-    "sql": "user=sa;pwd=L1br@c0m;Data Source=154.53.63.185;Initial Catalog=lcp.cloud.paas;MultipleActiveResultSets=True;Application Name=lcp.rest.paas;Encrypt=false"
+    "sql": "DRIVER={SQL Server};SERVER=154.53.63.185;DATABASE=lcp.cloud.paas;UID=sa;PWD=L1br@c0m;"
   },
   "Reports": {
     "OutputPath": "output/reports/"

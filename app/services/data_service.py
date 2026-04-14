@@ -27,6 +27,7 @@ def preparar_dados_evento_producao(dados_brutos: pd.DataFrame) -> pd.DataFrame:
         "taxa_producao",
         "tempo_rodando_segundo",
         "qtd_batelada",
+        "id_turno_estatico",
     ]
 
     for coluna in colunas_numericas:
@@ -39,9 +40,9 @@ def preparar_dados_evento_producao(dados_brutos: pd.DataFrame) -> pd.DataFrame:
     }
 
     dados["nome_turno"] = (
-        dados["id_evento_turno"]
+        dados["id_turno_estatico"]
         .map(mapeamento_turnos)
-        .fillna(dados["id_evento_turno"].astype(str))
+        .fillna(dados["id_turno_estatico"].astype(str))
     )
 
     return dados
@@ -49,13 +50,13 @@ def preparar_dados_evento_producao(dados_brutos: pd.DataFrame) -> pd.DataFrame:
 
 def gerar_resumo_por_turno(dados: pd.DataFrame) -> pd.DataFrame:
     """
-    Consolida os indicadores por turno.
+    Consolida os indicadores por turno estático.
     """
     if dados.empty:
         return pd.DataFrame()
 
     resumo = (
-        dados.groupby(["id_evento_turno", "nome_turno"], dropna=False)
+        dados.groupby(["id_turno_estatico", "nome_turno"], dropna=False)
         .agg(
             total_registros=("id_evento_producao", "count"),
             quantidade_total_produzida=("quantidade_produzida", "sum"),
@@ -67,7 +68,7 @@ def gerar_resumo_por_turno(dados: pd.DataFrame) -> pd.DataFrame:
             tempo_rodando_medio_seg=("tempo_rodando_segundo", "mean"),
         )
         .reset_index()
-        .sort_values("id_evento_turno")
+        .sort_values("id_turno_estatico")
         .reset_index(drop=True)
     )
 

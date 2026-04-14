@@ -1,5 +1,6 @@
+from app.services.report_builder_service import montar_relatorio_turnos
 from app.db.connection import testar_conexao
-from app.db.repository import buscar_eventos_producao
+from app.db.repositories import buscar_eventos_producao
 from app.services.data_service import (
     gerar_resumo_por_turno,
     preparar_dados_evento_producao,
@@ -10,6 +11,7 @@ from app.services.ranking_service import identificar_melhor_e_pior_turno
 def executar_aplicacao(
     data_inicio: str,
     data_fim: str,
+    id_application_client: str,
     limite: int | None = None,
 ) -> dict:
     """
@@ -23,12 +25,23 @@ def executar_aplicacao(
     dados_brutos = buscar_eventos_producao(
         data_inicio=data_inicio,
         data_fim=data_fim,
+        id_application_client=id_application_client,
         limite=limite,
     )
 
     dados_preparados = preparar_dados_evento_producao(dados_brutos)
     resumo_turnos = gerar_resumo_por_turno(dados_preparados)
     resultado_ranking = identificar_melhor_e_pior_turno(resumo_turnos)
+
+    relatorio = montar_relatorio_turnos(
+        resumo_turnos=resumo_turnos,
+        ranking=resultado_ranking["ranking"],
+        data_inicio=data_inicio,
+        data_fim=data_fim,
+        id_application_client=id_application_client,
+        melhor_turno=resultado_ranking["melhor_turno"],
+        pior_turno=resultado_ranking["pior_turno"],
+    )
 
     return {
         "dados_brutos": dados_brutos,
@@ -37,4 +50,5 @@ def executar_aplicacao(
         "ranking": resultado_ranking["ranking"],
         "melhor_turno": resultado_ranking["melhor_turno"],
         "pior_turno": resultado_ranking["pior_turno"],
+        "relatorio": relatorio,
     }
