@@ -1,0 +1,9 @@
+{
+  "Database": "sql",
+  "ConnectionStrings": {
+    "sql": "user=sa;pwd=L1br@c0m;Data Source=154.53.63.185;Initial Catalog=lcp.cloud.paas;MultipleActiveResultSets=True;Application Name=lcp.rest.paas;Encrypt=false"
+  },
+  "Reports": {
+    "OutputPath": "output/reports/"
+  }
+}

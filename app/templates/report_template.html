@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Turnos</title>
+    <link rel="stylesheet" href="report_styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Relatório de Turnos</h1>
+            <p class="data-geracao">Gerado em: {{ data_geracao }}</p>
+        </header>
+        
+        <section class="metricas">
+            <h2>Métricas</h2>
+            <div class="metricas-grid">
+                {% for metrica, valor in metricas.items() %}
+                <div class="metrica-item">
+                    <h3>{{ metrica }}</h3>
+                    <p class="valor">{{ valor }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        
+        <section class="ranking">
+            <h2>Ranking de Funcionários</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Posição</th>
+                        <th>Funcionário</th>
+                        <th>Horas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in ranking %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ item.funcionario }}</td>
+                        <td>{{ item.horas }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+        
+        <footer>
+            <p>&copy; 2024 TCC - Relatório de Turnos</p>
+        </footer>
+    </div>
+</body>
+</html>
