@@ -1,6 +1,7 @@
 import argparse
 
 from app.main import executar_aplicacao
+from app.services.pdf_service import gerar_pdf_relatorio
 
 
 def main() -> None:
@@ -50,10 +51,15 @@ def main() -> None:
     if resultado["ranking"].empty:
         print("Não foi possível calcular o ranking dos turnos.")
     else:
-        print(resultado["ranking"][["nome_turno", "pontuacao_total"]].to_string(index=False))
+        print(
+            resultado["ranking"][["nome_turno", "pontuacao_total"]].to_string(index=False)
+        )
 
     print(f"\nMelhor turno: {resultado['melhor_turno']}")
     print(f"Pior turno: {resultado['pior_turno']}")
+
+    caminho_pdf = gerar_pdf_relatorio(resultado["relatorio"])
+    print(f"\nPDF gerado com sucesso em: {caminho_pdf}")
 
 
 if __name__ == "__main__":
