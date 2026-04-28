@@ -1,19 +1,17 @@
 {
   "weights": {
-    "quantidade_total_produzida": 1.0,
-    "qtd_batelada_total": 0.8,
-    "oee_medio": 1.5,
-    "produtividade_media": 1.5,
-    "qualidade_media": 1.2,
-    "taxa_producao_media": 1.0,
-    "tempo_rodando_medio_seg": 1.0
+    "quantidade_total_produzida": 1.2,
+    "qtd_batelada_total": 1.3,
+    "oee_medio": 1.0,
+    "produtividade_media": 0.5,
+    "taxa_producao_media": 1.2,
+    "tempo_rodando_medio_seg": 0.4
   },
   "direction": {
     "quantidade_total_produzida": "higher",
     "qtd_batelada_total": "higher",
     "oee_medio": "higher",
     "produtividade_media": "higher",
-    "qualidade_media": "higher",
     "taxa_producao_media": "higher",
     "tempo_rodando_medio_seg": "lower"
   }

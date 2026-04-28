@@ -1,0 +1,4 @@
+﻿id_turno_estatico,nome_turno,quantidade_produzida,oee,produtividade,qualidade,taxa_producao,tempo_rodando_segundo,qtd_batelada
+3,Turno 1,459.5019,27.3597,39.5795,100.0,4.4867,228.8265,1.7066
+4,Turno 2,368.0549,12.1774,32.3705,100.0,3.193,178.9062,1.4167
+5,Turno 3,493.498,40.8078,60.5117,100.0,5.4897,223.4211,1.8553

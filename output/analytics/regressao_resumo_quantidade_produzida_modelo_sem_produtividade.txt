@@ -1,0 +1,30 @@
+                             OLS Regression Results                             
+================================================================================
+Dep. Variable:     quantidade_produzida   R-squared:                       0.856
+Model:                              OLS   Adj. R-squared:                  0.856
+Method:                   Least Squares   F-statistic:                     1141.
+Date:                  Mon, 27 Apr 2026   Prob (F-statistic):               0.00
+Time:                          23:24:54   Log-Likelihood:                -7293.6
+No. Observations:                  1156   AIC:                         1.460e+04
+Df Residuals:                      1149   BIC:                         1.464e+04
+Df Model:                             6                                         
+Covariance Type:              nonrobust                                         
+=========================================================================================
+                            coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------------
+const                   -17.7610      9.699     -1.831      0.067     -36.790       1.268
+qtd_batelada            202.8127      5.701     35.577      0.000     191.628     213.998
+tempo_rodando_segundo     0.2511      0.060      4.184      0.000       0.133       0.369
+taxa_producao            29.1866      2.172     13.438      0.000      24.925      33.448
+oee                      -2.0937      0.152    -13.772      0.000      -2.392      -1.795
+turno_4                 -14.1279      9.841     -1.436      0.151     -33.436       5.180
+turno_5                   4.0912      9.951      0.411      0.681     -15.433      23.616
+==============================================================================
+Omnibus:                      297.494   Durbin-Watson:                   1.852
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1220.814
+Skew:                           1.168   Prob(JB):                    8.01e-266
+Kurtosis:                       7.460   Cond. No.                         895.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.

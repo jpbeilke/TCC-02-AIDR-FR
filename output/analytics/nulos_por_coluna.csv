@@ -1,0 +1,16 @@
+﻿coluna,quantidade_nulos,percentual_nulos
+id_evento_producao,0,0.0
+data_evento,0,0.0
+quantidade_produzida,0,0.0
+id_evento_turno,0,0.0
+oee,0,0.0
+produtividade,0,0.0
+qualidade,0,0.0
+taxa_producao,0,0.0
+tempo_rodando_segundo,0,0.0
+qtd_batelada,0,0.0
+id_evento_turno_atual,0,0.0
+id_application_client,0,0.0
+id_turno_estatico,0,0.0
+data_inicio,0,0.0
+data_fim,0,0.0

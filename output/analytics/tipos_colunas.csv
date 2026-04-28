@@ -1,0 +1,16 @@
+﻿coluna,tipo
+id_evento_producao,int64
+data_evento,datetime64[ns]
+quantidade_produzida,float64
+id_evento_turno,int64
+oee,float64
+produtividade,float64
+qualidade,float64
+taxa_producao,float64
+tempo_rodando_segundo,int64
+qtd_batelada,int64
+id_evento_turno_atual,int64
+id_application_client,object
+id_turno_estatico,int64
+data_inicio,object
+data_fim,object
