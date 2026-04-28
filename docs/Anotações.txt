@@ -1,0 +1,21 @@
+-Descrição das tabelas (COLUNA POR COLUNA) e amostras 
+-Te mandar o link do Git
+-Mandar o TCC01 novamente
+
+-Solicitar referencia sobre analise exploradória de dados
+
+---------
+
+DUVIDAS
+
+-Sempre tem diferenças de turno? Usar produção de 1 ano+ (sazionalidade)
+-Quando é maior, por que é maior, performace do turno ao longo do tempo (mês, ano, semana)
+-Descobertas em tempo de TCC
+-Previsão
+-Entender dados
+-Estudar Regressão e analise exploratória de dados
+-Entender como funciona a empresa
+-citar a empresa mas de forma anônima no projeto
+-colocar mais informação sobre produto
+
+
