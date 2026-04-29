@@ -1,0 +1,5 @@
+livros para ler sobre ADA: cady capitulo 2 
+
+próximo passo: revisar mais IA no agronegócio (ver o que já existe)
+-aplicar algoritmo de regressão pra prever OEE com data do ano (cenario temporal) colocar um agente me cima pra ajudar usuários ao tomar decisões com base  nesses dados
+- que tipo de perguntas o usuário vai querer fazer pro agente, que tipo de decisão o operador tem que tomar (que tipo de dor podemos endereçar) 
