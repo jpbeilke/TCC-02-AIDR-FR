@@ -1,0 +1,12 @@
+Como isso entra no teu TCC
+
+No teu TCC, você pode dizer que a etapa inicial será baseada em análise exploratória dos dados de produção. Isso inclui:
+
+organizar os dados disponíveis;
+verificar qualidade, falhas, dados faltantes e inconsistências;
+criar gráficos por turno, linha, produto e período;
+identificar padrões de produção, desvios e possíveis gargalos;
+criar variáveis úteis para análise, como produtividade por turno, diferença entre planejado e realizado, tempo de parada, média móvel, tendência por período e variação por linha;
+só depois avaliar modelos, agentes inteligentes ou métodos de apoio à decisão.
+
+Essa abordagem é boa porque mostra maturidade metodológica. Você não está dizendo “vou jogar IA nos dados”; está dizendo “vou entender os dados primeiro, extrair conhecimento e depois usar isso para apoiar decisões”.
