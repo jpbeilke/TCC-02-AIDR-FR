@@ -1,0 +1,5 @@
+﻿variavel,coeficiente,erro_padrao,estatistica_t,p_valor
+const,0.114763,1.792639,0.064019,0.948966
+taxa_producao,6.072341,0.270745,22.428297,0.0
+turno_4,-7.326161,1.906497,-3.842734,0.000128
+turno_5,7.357526,1.89854,3.87536,0.000112

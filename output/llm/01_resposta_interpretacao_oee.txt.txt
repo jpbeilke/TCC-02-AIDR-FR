@@ -1,0 +1,105 @@
+Interpretação técnica dos fatores associados ao OEE
+
+A regressão indica que o OEE está associado principalmente à taxa de produção, à quantidade de bateladas e ao turno operacional. Porém, é importante reforçar: o modelo mostra associação estatística, não prova que essas variáveis causam aumento ou redução do OEE.
+
+1. Principais achados
+
+O modelo apresentou R² de 0,2735, ou seja, explica aproximadamente 27,35% da variação do OEE com as variáveis incluídas.
+
+Isso indica um poder explicativo moderado/baixo. O modelo consegue capturar parte relevante do comportamento do OEE, mas ainda existe uma parcela grande da variação que depende de outros fatores operacionais não incluídos.
+
+Os principais achados são:
+
+taxa_producao tem a maior associação positiva com o OEE;
+qtd_batelada também apresenta associação positiva;
+Turno 2, representado por turno_4, apresenta OEE médio inferior ao Turno 1;
+Turno 3, representado por turno_5, apresenta OEE médio superior ao Turno 1;
+os VIFs são baixos, indicando que não há sinal relevante de multicolinearidade entre as variáveis do modelo;
+todas as variáveis foram estatisticamente significativas, mas, com mais de 317 mil observações, isso deve ser interpretado com cuidado, pois amostras muito grandes tendem a tornar pequenas diferenças estatisticamente significativas.
+2. Significado prático dos coeficientes
+
+Considerando as demais variáveis constantes:
+
+taxa_producao: 5,211792
+
+Esse é o coeficiente com maior impacto positivo no modelo.
+
+Na prática, um aumento de 1 unidade na taxa de produção está associado a um aumento médio de aproximadamente 5,21 pontos no OEE.
+
+Isso sugere que períodos com maior ritmo produtivo tendem a apresentar melhor desempenho de OEE. Faz sentido operacionalmente, pois maior taxa de produção pode estar associada a menor ociosidade, melhor aproveitamento da linha ou menor perda de desempenho.
+
+qtd_batelada: 0,313652
+
+Cada aumento de 1 batelada está associado a um aumento médio de aproximadamente 0,31 ponto no OEE.
+
+Na prática, turnos com maior quantidade de bateladas tendem a apresentar OEE maior. Isso pode indicar melhor aproveitamento do período produtivo, mas não permite concluir que simplesmente produzir mais bateladas causa aumento de OEE.
+
+const: 17,671728
+
+A constante representa o OEE estimado quando todas as variáveis numéricas são zero e o turno é o Turno 1.
+
+Na prática, esse valor tem interpretação operacional limitada, porque situações com qtd_batelada = 0 e taxa_producao = 0 podem não representar uma condição produtiva real. Ela serve mais como ponto matemático de referência do modelo.
+
+3. Interpretação das diferenças entre turnos
+
+O Turno 1 foi usado como referência.
+
+Turno 2 — turno_4: -2,287845
+
+O Turno 2 apresentou, em média, um OEE aproximadamente 2,29 pontos menor que o Turno 1, mantendo constantes a quantidade de bateladas e a taxa de produção.
+
+Isso indica uma associação negativa do Turno 2 em relação ao turno de referência.
+
+Em termos práticos, pode existir alguma diferença operacional entre o Turno 2 e o Turno 1, como rotina de operação, perfil de produção, disponibilidade da linha, paradas ou condições específicas do período. Porém, o modelo atual não permite dizer qual é a causa dessa diferença.
+
+Turno 3 — turno_5: 5,380093
+
+O Turno 3 apresentou, em média, um OEE aproximadamente 5,38 pontos maior que o Turno 1, mantendo constantes as demais variáveis.
+
+Esse é um achado relevante, pois sugere que o Turno 3 tem desempenho médio superior ao turno de referência dentro do modelo analisado.
+
+Na prática, vale investigar quais características operacionais diferenciam esse turno: tipo de produto, estabilidade da operação, menor ocorrência de paradas, programação da produção ou outros fatores ainda não incluídos no modelo.
+
+4. Limitações do modelo
+
+Apesar de ser interpretável e estatisticamente estável, o modelo possui limitações importantes:
+
+R² moderado/baixo
+O modelo explica cerca de 27% da variação do OEE. Isso mostra que há outros fatores relevantes influenciando o indicador.
+Associação não é causalidade
+Não é possível afirmar que aumentar taxa de produção ou quantidade de bateladas causará aumento direto no OEE. O modelo apenas mostra que essas variáveis caminham associadas ao OEE.
+Modelo linear simplifica a realidade operacional
+A relação entre produção, bateladas, turnos e OEE pode não ser totalmente linear. Pode haver efeitos de saturação, gargalos ou interações entre variáveis.
+Faltam variáveis operacionais críticas
+OEE normalmente depende de disponibilidade, performance e qualidade. O modelo usa poucas variáveis, então não captura diretamente perdas por parada, setup, manutenção, retrabalho, qualidade ou troca de produto.
+Significância estatística deve ser analisada com cuidado
+Como a base tem 317.121 observações, p-valores muito baixos são esperados. Por isso, a análise deve priorizar também o tamanho dos coeficientes e o significado operacional.
+Possíveis efeitos por linha, produto ou período
+Se os dados envolverem diferentes linhas, produtos, famílias ou períodos do ano, essas diferenças podem afetar o OEE e não estão explicitamente representadas no modelo informado.
+5. Dados adicionais que poderiam melhorar a explicação do OEE
+
+Para melhorar o poder explicativo do modelo, seria importante incluir dados que representem melhor as perdas reais do processo produtivo.
+
+Alguns exemplos:
+
+tempo de parada planejada e não planejada;
+motivo das paradas;
+tempo de setup ou troca de produto;
+tipo de produto ou família produzida;
+linha ou equipamento utilizado;
+meta de produção por produto/linha;
+tempo disponível de produção no turno;
+quantidade planejada versus quantidade realizada;
+eventos de manutenção corretiva ou preventiva;
+falhas de dosagem, transporte, moagem, mistura ou expedição;
+reprocesso, perdas ou desvios de qualidade;
+equipe, operador ou composição do turno, se permitido e anonimizado;
+dia da semana, mês, safra ou sazonalidade operacional;
+parâmetros de processo, como tempo de mistura, tempo de ciclo, consumo de energia ou velocidade dos equipamentos.
+Conclusão técnica
+
+O modelo mostra que o OEE está positivamente associado à taxa de produção e à quantidade de bateladas, enquanto também apresenta diferenças relevantes entre turnos.
+
+O Turno 2 aparece com desempenho médio inferior ao Turno 1, enquanto o Turno 3 aparece com desempenho médio superior. Essas diferenças merecem investigação operacional, mas não devem ser tratadas como causa direta sem análise complementar.
+
+Como o R² é de aproximadamente 27%, o modelo é útil para interpretação inicial e geração de hipóteses, mas ainda não explica a maior parte da variação do OEE. Para evoluir para análises mais prescritivas, o próximo passo seria incluir variáveis ligadas diretamente às perdas do OEE: paradas, setup, qualidade, tipo de produto, linha, manutenção e programação da produção.

@@ -1,0 +1,6 @@
+﻿variavel,coeficiente,erro_padrao,estatistica_t,p_valor
+const,-1.308385,1.811461,-0.722282,0.470268
+qtd_batelada,3.234175,0.767146,4.215855,2.7e-05
+taxa_producao,5.159338,0.345182,14.946714,0.0
+turno_4,-7.569573,1.893648,-3.99735,6.8e-05
+turno_5,7.792573,1.88769,4.1281,3.9e-05

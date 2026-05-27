@@ -1,0 +1,28 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                    oee   R-squared:                       0.274
+Model:                            OLS   Adj. R-squared:                  0.274
+Method:                 Least Squares   F-statistic:                 2.985e+04
+Date:                Tue, 26 May 2026   Prob (F-statistic):               0.00
+Time:                        22:45:37   Log-Likelihood:            -1.4775e+06
+No. Observations:              317121   AIC:                         2.955e+06
+Df Residuals:                  317116   BIC:                         2.955e+06
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+=================================================================================
+                    coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------
+const            17.6717      0.088    201.147      0.000      17.500      17.844
+qtd_batelada      0.3137      0.023     13.450      0.000       0.268       0.359
+taxa_producao     5.2118      0.016    318.502      0.000       5.180       5.244
+turno_4          -2.2878      0.104    -21.996      0.000      -2.492      -2.084
+turno_5           5.3801      0.120     44.650      0.000       5.144       5.616
+==============================================================================
+Omnibus:                    17515.651   Durbin-Watson:                   0.910
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            21359.524
+Skew:                           0.569   Prob(JB):                         0.00
+Kurtosis:                       3.567   Cond. No.                         15.9
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.

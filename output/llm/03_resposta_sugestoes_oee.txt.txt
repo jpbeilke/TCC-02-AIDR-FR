@@ -1,0 +1,206 @@
+1. Principais fatores associados ao OEE
+
+Com base no modelo apresentado, os fatores mais associados ao OEE foram:
+
+Taxa de produção
+
+A variável taxa_producao apresentou o maior coeficiente positivo do modelo: 5,211792.
+
+Isso indica que maiores taxas de produção estão associadas a maiores valores médios de OEE. Na prática, esse é o principal ponto a ser acompanhado, pois pode representar melhor aproveitamento da capacidade produtiva do turno.
+
+Alerta metodológico: isso não significa que simplesmente aumentar a taxa de produção irá causar aumento automático no OEE. A taxa pode estar refletindo outras condições favoráveis da operação, como menor tempo parado, melhor sequência produtiva ou maior estabilidade do processo.
+
+Quantidade de bateladas
+
+A variável qtd_batelada também apresentou associação positiva com o OEE, com coeficiente de 0,313652.
+
+Isso indica que turnos com maior quantidade de bateladas tendem a estar associados a OEE mais alto.
+
+Na prática, pode ser um sinal de melhor ocupação do turno produtivo, menor ociosidade ou melhor aproveitamento do tempo disponível.
+
+Alerta metodológico: aumentar bateladas sem avaliar capacidade, qualidade, setup e estabilidade pode gerar efeito contrário. A quantidade de bateladas deve ser analisada junto com a condição real da linha.
+
+Diferenças entre turnos
+
+O Turno 1 foi usado como referência.
+
+turno_4: coeficiente -2,287845
+Representa o Turno 2, associado a OEE médio 2,29 pontos menor que o Turno 1.
+turno_5: coeficiente 5,380093
+Representa o Turno 3, associado a OEE médio 5,38 pontos maior que o Turno 1.
+
+Isso sugere que há diferenças operacionais entre os turnos que merecem investigação, principalmente no Turno 2, que aparece com desempenho inferior no modelo.
+
+2. Ações de curto prazo
+1. Monitorar diariamente a taxa de produção por turno
+
+Como taxa_producao foi a variável com maior associação positiva com o OEE, a primeira ação prática seria acompanhar esse indicador por turno.
+
+Sugestão prática:
+
+comparar taxa de produção média entre Turno 1, Turno 2 e Turno 3;
+identificar dias ou turnos com taxa muito abaixo do padrão;
+verificar se quedas na taxa coincidem com OEE baixo;
+criar um painel simples por turno com OEE, taxa de produção e quantidade de bateladas.
+
+Essa ação não exige mudança direta no processo, apenas melhora a visibilidade operacional.
+
+Depende de validação: sim. É necessário confirmar se a taxa de produção está sendo medida de forma consistente em todos os turnos.
+
+2. Investigar o Turno 2 com foco em rotina operacional
+
+O modelo indica que o Turno 2 tem associação negativa com o OEE em relação ao Turno 1.
+
+Sugestão prática:
+
+comparar OEE, taxa de produção e quantidade de bateladas do Turno 2 contra os demais;
+verificar se o Turno 2 possui maior variabilidade nos resultados;
+observar se o desempenho inferior ocorre todos os dias ou apenas em períodos específicos;
+conversar com operação/supervisão para entender diferenças de rotina entre os turnos.
+
+O objetivo não é apontar culpa para o turno, mas identificar se existe algum padrão operacional que esteja prejudicando o desempenho.
+
+Depende de validação: sim. A regressão não mostra a causa da diferença do turno, apenas indica associação.
+
+3. Usar o Turno 3 como referência comparativa interna
+
+O Turno 3 apareceu com associação positiva relevante em relação ao Turno 1.
+
+Sugestão prática:
+
+comparar práticas operacionais do Turno 3 com os demais turnos;
+verificar se o Turno 3 apresenta maior taxa de produção, maior quantidade de bateladas ou menor variação operacional;
+identificar padrões que possam ser replicados, caso sejam confirmados no ambiente real.
+
+Exemplo de uso prático: se o Turno 3 tiver uma sequência operacional mais estável, uma rotina de acompanhamento mais eficiente ou melhor organização do turno, isso pode servir como base para padronização.
+
+Depende de validação: sim. O modelo não informa o motivo do melhor desempenho do Turno 3.
+
+4. Acompanhar quantidade de bateladas por turno
+
+Como qtd_batelada tem associação positiva com o OEE, vale acompanhar se existem turnos com baixa quantidade de bateladas produzidas.
+
+Sugestão prática:
+
+comparar bateladas planejadas versus bateladas realizadas;
+identificar turnos com baixa produção recorrente;
+verificar se baixa quantidade de bateladas coincide com OEE baixo;
+avaliar se há ociosidade ou perda de tempo produtivo.
+
+Cuidado: não se deve buscar apenas “mais bateladas” sem analisar qualidade, disponibilidade e capacidade real da linha.
+
+5. Criar rotina de reunião curta por turno
+
+Uma ação simples seria criar uma rotina diária ou semanal para revisar os indicadores principais:
+
+OEE por turno;
+taxa de produção por turno;
+quantidade de bateladas por turno;
+diferença em relação à média;
+principais desvios observados.
+
+Essa rotina ajuda a transformar o modelo em acompanhamento operacional, sem depender imediatamente de mudanças grandes no processo.
+
+3. Ações de médio prazo
+1. Padronizar boas práticas entre turnos
+
+Como existe diferença entre os turnos, uma ação de médio prazo seria buscar maior padronização operacional.
+
+Sugestão prática:
+
+comparar procedimentos entre Turno 1, Turno 2 e Turno 3;
+identificar práticas do turno com melhor desempenho;
+criar um padrão operacional mínimo para acompanhamento da produção;
+alinhar critérios de operação, registro e acompanhamento dos indicadores.
+
+Depende de validação: sim. Antes de padronizar qualquer prática, é necessário confirmar o que realmente diferencia os turnos.
+
+2. Desenvolver painel de acompanhamento do OEE por turno
+
+O modelo já indica que turno, taxa de produção e quantidade de bateladas são variáveis relevantes. Então, um painel operacional poderia ajudar na gestão.
+
+O painel poderia mostrar:
+
+OEE por turno;
+taxa de produção por turno;
+quantidade de bateladas por turno;
+comparação entre turnos;
+tendência diária, semanal e mensal;
+alertas quando algum turno ficar abaixo do padrão histórico.
+
+Essa ação ajuda a transformar a análise estatística em ferramenta de decisão operacional.
+
+3. Criar análise de desvios do Turno 2
+
+Como o Turno 2 teve associação negativa no modelo, ele deve ser analisado com mais profundidade.
+
+Sugestão prática:
+
+separar os registros do Turno 2;
+identificar dias com OEE muito baixo;
+comparar com taxa de produção e quantidade de bateladas nesses mesmos dias;
+verificar se o problema é recorrente ou concentrado em poucos eventos;
+comparar o comportamento com Turno 1 e Turno 3.
+
+Essa análise pode ajudar a entender se o Turno 2 tem uma perda estrutural ou se poucos eventos estão puxando o resultado para baixo.
+
+4. Evoluir o modelo com mais variáveis operacionais
+
+O R² de 0,273545 indica que o modelo explica cerca de 27,35% da variação do OEE. Portanto, há espaço para melhorar a explicação incluindo mais informações do processo.
+
+Ação de médio prazo:
+
+ampliar a base de dados;
+incluir variáveis ligadas a paradas, setup, qualidade, produto e linha;
+testar modelos com interações entre turno e taxa de produção;
+avaliar se o efeito do turno muda conforme o volume produzido.
+
+Essa evolução é importante para sair de uma análise mais geral e chegar em recomendações mais específicas.
+
+4. Dados adicionais que deveriam ser coletados
+
+Para melhorar a explicação do OEE e tornar as sugestões mais confiáveis, seria importante coletar ou integrar dados como:
+
+tempo de parada por turno;
+motivo das paradas;
+tempo de setup ou troca de produto;
+produto ou família produzida;
+linha/equipamento utilizado;
+quantidade planejada versus realizada;
+tempo disponível de produção;
+perdas de qualidade ou retrabalho;
+eventos de manutenção;
+programação da produção;
+variação de taxa de produção dentro do turno;
+registros de início e fim de bateladas;
+gargalos por etapa do processo, quando disponíveis.
+
+Esses dados ajudariam a entender melhor por que a taxa de produção e a quantidade de bateladas se associam ao OEE.
+
+5. Limitações das sugestões propostas
+
+As sugestões acima devem ser tratadas como direcionamentos operacionais iniciais, não como decisões definitivas.
+
+Principais limitações:
+
+A regressão indica associação, não causalidade
+Não é possível afirmar que aumentar taxa de produção ou quantidade de bateladas irá, por si só, aumentar o OEE.
+O modelo explica apenas parte da variação do OEE
+Com R² de aproximadamente 27%, muitos fatores importantes ainda estão fora da análise.
+O efeito dos turnos não explica o motivo da diferença
+O Turno 2 aparece pior e o Turno 3 melhor em relação ao Turno 1, mas o modelo não informa a causa operacional dessa diferença.
+As ações precisam ser validadas no chão de fábrica
+Antes de alterar rotina, meta ou cobrança por turno, é necessário verificar os dados operacionais reais e conversar com a equipe envolvida.
+Pode haver diferenças de condição entre os turnos
+Se os turnos operam com produtos, volumes ou condições diferentes, a comparação direta pode ser injusta.
+Síntese prescritiva
+
+A prioridade deve ser:
+
+acompanhar e estabilizar a taxa de produção por turno;
+monitorar a quantidade de bateladas realizadas;
+investigar o Turno 2, que aparece associado a OEE menor;
+usar o Turno 3 como referência comparativa, desde que as condições sejam equivalentes;
+coletar dados adicionais de paradas, setup, produto, linha e qualidade para melhorar a explicação do OEE.
+
+A recomendação mais segura é usar o modelo como ferramenta de triagem e priorização de investigação operacional, e não como prova direta de causa.

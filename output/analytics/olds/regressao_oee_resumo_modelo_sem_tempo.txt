@@ -1,0 +1,31 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                    oee   R-squared:                       0.485
+Model:                            OLS   Adj. R-squared:                  0.483
+Method:                 Least Squares   F-statistic:                     216.9
+Date:                Tue, 26 May 2026   Prob (F-statistic):          4.92e-163
+Time:                        22:15:55   Log-Likelihood:                -5309.9
+No. Observations:                1156   AIC:                         1.063e+04
+Df Residuals:                    1150   BIC:                         1.066e+04
+Df Model:                           5                                         
+Covariance Type:            nonrobust                                         
+========================================================================================
+                           coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------------
+const                   -1.5706      1.676     -0.937      0.349      -4.859       1.718
+quantidade_produzida    -0.0679      0.005    -13.949      0.000      -0.077      -0.058
+qtd_batelada            17.6924      1.256     14.084      0.000      15.228      20.157
+taxa_producao            6.6702      0.337     19.779      0.000       6.009       7.332
+turno_4                 -7.6300      1.752     -4.355      0.000     -11.068      -4.192
+turno_5                  6.4360      1.749      3.679      0.000       3.004       9.868
+==============================================================================
+Omnibus:                      173.654   Durbin-Watson:                   0.880
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              276.857
+Skew:                           0.998   Prob(JB):                     7.61e-61
+Kurtosis:                       4.329   Cond. No.                     1.95e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.95e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.

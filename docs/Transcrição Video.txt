@@ -1,0 +1,14 @@
+- Como o agente de IA pode fazer melhorar o OEE]
+- Carregar dados pra o chatGPT para ele ver o que consegue extrair antes do CrewIA (com os dados da regreção) como ele pode gerar sugestões, prescritivas com os dados de 1 ano
+- Ir guardando os prompts
+- Com os resultados construir o artigo, não esquecer do artigo colocar todo o cenário de aplicação
+
+
+Próximos passos:
+preparar base de 1 ano
+fazer EDA focada em OEE
+fazer regressão com OEE como alvo
+resumir os achados
+levar esses achados para o ChatGPT
+guardar os prompts
+usar isso no artigo

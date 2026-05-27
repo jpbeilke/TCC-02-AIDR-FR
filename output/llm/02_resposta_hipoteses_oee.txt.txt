@@ -1,0 +1,109 @@
+1. Evidências encontradas nos dados
+
+Com base na regressão, as evidências observadas são:
+
+taxa_producao apresentou associação positiva com o OEE, com coeficiente de 5,211792. Isso indica que, mantendo as demais variáveis constantes, maiores valores de taxa de produção estão associados a maiores valores médios de OEE.
+qtd_batelada também apresentou associação positiva, com coeficiente de 0,313652. Ou seja, turnos com maior quantidade de bateladas tendem a estar associados a OEE mais alto.
+Turno 2, representado por turno_4, apresentou coeficiente de -2,287845 em relação ao Turno 1. Isso indica que, no modelo, o Turno 2 aparece associado a um OEE médio aproximadamente 2,29 pontos menor que o Turno 1, considerando constantes taxa_producao e qtd_batelada.
+Turno 3, representado por turno_5, apresentou coeficiente de 5,380093 em relação ao Turno 1. Isso indica associação com OEE médio aproximadamente 5,38 pontos maior que o Turno 1, mantendo as demais variáveis constantes.
+O modelo tem R² de 0,273545, ou seja, explica cerca de 27,35% da variação do OEE. Portanto, há outros fatores operacionais não incluídos no modelo que provavelmente também influenciam o indicador.
+Os VIFs são baixos, indicando que não há forte multicolinearidade entre as variáveis usadas.
+
+Importante: essas evidências mostram associação estatística, não causalidade.
+
+2. Hipóteses operacionais para OEE mais baixo
+Hipótese 1 — Turno com menor taxa de produção tende a apresentar menor OEE
+
+Base nos dados:
+A variável taxa_producao teve o maior coeficiente positivo do modelo.
+
+Hipótese operacional:
+Se algum turno opera com menor taxa de produção média, esse turno pode apresentar OEE mais baixo. Isso pode estar relacionado a menor ritmo produtivo, maior tempo improdutivo ou operação abaixo da capacidade esperada.
+
+Relação com o modelo:
+Como taxa_producao está positivamente associada ao OEE, reduções nessa variável tendem a acompanhar reduções no OEE.
+
+O que não pode ser afirmado:
+Não é possível dizer que a menor taxa de produção causa o OEE baixo. O modelo apenas mostra que as duas variáveis estão associadas.
+
+Hipótese 2 — Turno com menor quantidade de bateladas pode ter menor aproveitamento produtivo
+
+Base nos dados:
+A variável qtd_batelada tem coeficiente positivo de 0,313652.
+
+Hipótese operacional:
+Turnos com menor número de bateladas podem estar aproveitando menos o tempo disponível de produção, o que pode se refletir em OEE menor.
+
+Relação com o modelo:
+Cada batelada adicional está associada a aumento médio de aproximadamente 0,31 ponto no OEE, mantendo as demais variáveis constantes.
+
+O que não pode ser afirmado:
+Não dá para concluir que simplesmente aumentar o número de bateladas elevará o OEE. Pode existir outro fator por trás, como programação de produção, disponibilidade da linha ou tipo de operação do turno.
+
+Hipótese 3 — O Turno 2 pode ter alguma condição operacional desfavorável não explicada pelas variáveis do modelo
+
+Base nos dados:
+O coeficiente de turno_4 foi -2,287845, indicando OEE médio menor que o Turno 1 mesmo considerando taxa_producao e qtd_batelada.
+
+Hipótese operacional:
+O Turno 2 pode estar exposto a alguma condição operacional que reduz o OEE e que não foi capturada diretamente pelo modelo.
+
+Isso pode envolver diferenças de rotina, forma de operação, estabilidade do processo ou características específicas do período, mas esses fatores não estão presentes nos resultados informados e precisam ser verificados na fábrica.
+
+Relação com o modelo:
+Como o efeito negativo do Turno 2 permanece no modelo, a diferença entre turnos não parece ser explicada apenas por taxa_producao e qtd_batelada.
+
+O que não pode ser afirmado:
+Não é possível afirmar qual é a causa do desempenho menor do Turno 2. O modelo apenas indica que há uma diferença média associada a esse turno.
+
+Hipótese 4 — O Turno 3 pode ter uma condição operacional mais favorável
+
+Base nos dados:
+O coeficiente de turno_5 foi 5,380093, indicando OEE médio maior que o Turno 1.
+
+Hipótese operacional:
+O Turno 3 pode estar operando em condições mais favoráveis, com melhor aproveitamento produtivo, maior estabilidade operacional ou padrão de produção mais eficiente.
+
+Relação com o modelo:
+Mesmo controlando taxa_producao e qtd_batelada, o Turno 3 ainda aparece com associação positiva relevante em relação ao Turno 1.
+
+O que não pode ser afirmado:
+Não dá para concluir que o Turno 3 é “melhor” por causa de equipe, produto, rotina ou qualquer fator específico, porque esses dados não foram informados no modelo.
+
+Hipótese 5 — Parte importante do OEE depende de fatores não incluídos na regressão
+
+Base nos dados:
+O R² é de aproximadamente 27,35%.
+
+Hipótese operacional:
+O OEE pode estar sendo influenciado por fatores operacionais que não aparecem no modelo atual. Portanto, diferenças entre turnos podem depender de informações adicionais além de taxa de produção, quantidade de bateladas e identificação do turno.
+
+Relação com o modelo:
+O modelo é útil para levantar hipóteses, mas não explica a maior parte da variação do OEE.
+
+O que não pode ser afirmado:
+Não é possível atribuir o OEE baixo a uma causa específica sem dados adicionais e validação no ambiente real.
+
+3. Pontos que precisam ser verificados na fábrica
+
+Antes de qualquer decisão operacional, eu verificaria os seguintes pontos:
+
+Comparar a taxa de produção média por turno
+Verificar se o Turno 2 realmente apresenta taxa de produção menor que os demais turnos.
+Comparar a quantidade de bateladas por turno
+Avaliar se o Turno 2 produz menos bateladas ou se há maior variação na quantidade produzida.
+Analisar a distribuição do OEE por turno
+Não olhar apenas a média. Verificar mediana, dispersão e ocorrência de valores muito baixos.
+Investigar por que o Turno 2 ficou abaixo do Turno 1
+Como turno_4 teve coeficiente negativo, esse turno deveria ser analisado com mais detalhe no chão de fábrica.
+Investigar o que diferencia o Turno 3 dos demais
+Como turno_5 teve associação positiva forte, pode haver algum padrão operacional que ajude a entender o melhor desempenho.
+Verificar se os turnos operam em condições comparáveis
+Antes de comparar desempenho, é necessário confirmar se os turnos trabalham com condições semelhantes de produção. Caso contrário, a comparação direta pode ser injusta.
+Adicionar dados operacionais complementares ao modelo
+O modelo atual explica apenas parte do OEE. Para melhorar a análise, seria importante incluir dados como paradas, tempos improdutivos, setups, produto produzido, linha/equipamento, manutenção, qualidade e programação da produção, caso esses dados estejam disponíveis.
+Síntese objetiva
+
+A principal evidência é que taxa de produção e quantidade de bateladas estão positivamente associadas ao OEE. Entre os turnos, o Turno 2 aparece com desempenho médio inferior ao Turno 1, enquanto o Turno 3 aparece com desempenho médio superior.
+
+A hipótese mais forte para investigar é que o Turno 2 possui alguma condição operacional desfavorável não capturada pelo modelo atual. Porém, isso ainda precisa ser confirmado com dados adicionais e observação do processo real.
